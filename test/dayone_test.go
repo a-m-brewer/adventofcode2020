@@ -21,7 +21,7 @@ func TestDay1Part1Example1(t *testing.T) {
 }
 
 func TestDay1Part1Exercise1(t *testing.T) {
-	input, err := utils.LoadIntsFromFile("../inputs/day1exercise1.txt")
+	input, err := utils.LoadIntsFromFile("../inputs/day1.txt")
 
 	expected := 980499
 
@@ -54,9 +54,9 @@ func TestDay1Part2Example1(t *testing.T) {
 }
 
 func TestDay1Part2Exercise1(t *testing.T) {
-	input, err := utils.LoadIntsFromFile("../inputs/day1exercise1.txt")
+	input, err := utils.LoadIntsFromFile("../inputs/day1.txt")
 
-	expected := 980499
+	expected := 200637446
 
 	if err != nil {
 		t.Error(err.Error())
