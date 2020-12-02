@@ -30,3 +30,23 @@ func LoadIntsFromFile(path string) ([]int, error) {
 
 	return lines, err
 }
+
+// LoadLines reads a file and returns it as an array where each line is an item in the array
+func LoadLines(path string) ([]string, error) {
+	file, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	var lines []string
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		lines = append(lines, scanner.Text())
+	}
+
+	err = scanner.Err()
+
+	return lines, err
+}
