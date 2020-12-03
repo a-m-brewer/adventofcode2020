@@ -193,7 +193,7 @@ func TestDay2Part2Example4(t *testing.T) {
 }
 
 func TestDay2Part2Exercise(t *testing.T) {
-	expected := 645
+	expected := 737
 
 	policyStrings, err := utils.LoadLines("../inputs/day2.txt")
 	if err != nil {
