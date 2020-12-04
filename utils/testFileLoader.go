@@ -2,6 +2,7 @@ package utils
 
 import (
 	"bufio"
+	"io/ioutil"
 	"os"
 	"strconv"
 )
@@ -49,4 +50,16 @@ func LoadLines(path string) ([]string, error) {
 	err = scanner.Err()
 
 	return lines, err
+}
+
+// LoadString loads a file into a string
+func LoadString(path string) (string, error) {
+	b, err := ioutil.ReadFile(path)
+	if err != nil {
+		return "", err
+	}
+
+	s := string(b)
+
+	return s, nil
 }

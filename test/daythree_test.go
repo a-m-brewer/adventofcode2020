@@ -71,7 +71,7 @@ func TestDay3Part2Exercise(t *testing.T) {
 
 	tmap := daythree.NewTobogganMap(lines)
 
-	expected := 336
+	expected := 1115775000
 
 	actual := tmap.ProbabilityOfSuddenArboreal(daythree.Courses{
 		daythree.Course{X: 1, Y: 1},
