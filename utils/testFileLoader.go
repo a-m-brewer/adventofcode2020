@@ -52,6 +52,26 @@ func LoadLines(path string) ([]string, error) {
 	return lines, err
 }
 
+func LoadStringGrid(path string) ([][]rune, error) {
+	file, err := os.Open(path)
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	var lines [][]rune
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		runes := []rune(scanner.Text())
+		lines = append(lines, runes)
+	}
+
+	err = scanner.Err()
+
+	return lines, err
+}
+
 // LoadString loads a file into a string
 func LoadString(path string) (string, error) {
 	b, err := ioutil.ReadFile(path)
