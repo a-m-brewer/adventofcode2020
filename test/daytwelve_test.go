@@ -52,7 +52,7 @@ func TestDay12Part2Example1(t *testing.T) {
 	sut := daytwelve.NewShip(input)
 	sut.Part = daytwelve.PART2
 
-	expected := 286
+	expected := 20873
 
 	sut.Run()
 
